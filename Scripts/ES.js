@@ -22,10 +22,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
    console.log(`${esFile}${new FileLoad().getObjectEntires()}`);
    console.log(`${esFile}${new FileLoad(). getObjectProperties()}`);
    console.log(`${esFile}${new FileLoad().getAsyncAwaitValue()}`);
-   console.log(`${esFile}${new FileLoad().getMergedObject()}`);
-
-  
-
 });
 
 var arrowSyntax = (x) =>  x;
@@ -136,18 +132,11 @@ class FileLoad extends File {
         //can also do catch on the line or catch entire function
     }
 
+    //can also do try, catch, finally on promises
      getAwaitedValue(){
         return new Promise( value => {
             setTimeout(value("Async Awaited value")), 1000;
         });
-    }
-
-    getMergedObject(){
-        firstName = {firstName : "Lee"};
-        lastName = {lastName :"Cant"};
-
-        name ={ ...firstName, ...lastName}
-        return name;   
     }
 }
 

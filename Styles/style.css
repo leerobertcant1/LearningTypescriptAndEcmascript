@@ -1,0 +1,33 @@
+h1 {
+  color: #c9a9f3;
+}
+
+/*CSS can be hierarchial with divs*/
+.text-area .inner-text-one {
+  color: red;
+  /*Re-usable bits of CSS*/
+  background-color: #f7f2f2;
+  /*Can do basic maths*/
+  width: 80%;
+  /*Events can sit inside like so*/
+}
+.text-area .inner-text-one:hover {
+  color: blue;
+}
+
+.inner-text-two {
+  color: blue;
+  background-color: grey;
+}
+.inner-text-two:hover {
+  color: red;
+  /* Can do if statements */
+  width: 200%;
+}
+
+/*This allows CSS to inherit/ extend*/
+.inner-text-two {
+  width: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

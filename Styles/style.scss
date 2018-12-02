@@ -1,0 +1,43 @@
+@import './font-colors.scss';
+@import './mixins.scss';
+
+h1{
+    color: rgb(201, 169, 243);
+ }
+
+
+/*CSS can be hierarchial with divs*/
+ .text-area
+     .inner-text-one{
+        color:$red;
+
+        /*Re-usable bits of CSS*/
+        @include backgroundGrey();
+        /*Can do basic maths*/
+        width:100% - 20%;
+        
+        /*Events can sit inside like so*/
+        &:hover{
+            color: $blue;
+        }
+     }
+     .inner-text-two{
+        color:$blue;
+        @include backgroundDarkGrey();
+        @extend %widthExtension;
+
+        &:hover{
+            color: $red;
+
+            /* Can do if statements */
+            @if $red == red{
+                width: 200%;
+            }
+        }
+     }
+ 
+
+/*This allows CSS to inherit/ extend*/
+ %widthExtension{
+     width: 50%;
+ }

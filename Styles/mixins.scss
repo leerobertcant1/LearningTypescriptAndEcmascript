@@ -1,0 +1,9 @@
+@import './font-colors.scss';
+
+@mixin backgroundGrey(){
+    background-color: rgb(247, 242, 242);   
+}
+
+@mixin backgroundDarkGrey(){
+    background-color: grey;   
+}
